@@ -71,6 +71,7 @@ macOS:
 
 FreeBSD:
 1. Preparation (only first time)
+
    $conan profile detect --force
    
    $cp ~/.conan2/profiles/default ~/.conan2/profiles/FreeBSD.Release (confirm compiler.cppstd in FreeBSD.Release： compiler.cppstd=gnu17 or compiler.cppstd=17)
@@ -81,8 +82,10 @@ FreeBSD:
 
      tools.system.package_manager:sudo = True
 2. Build dependencies
+
    $conan install . -b missing -pr FreeBSD.Release (build gpref library fails, I'm tracking this issue: https://github.com/conan-io/conan/issues/15077)
 3. Build nekoray
+
    $cd build
 
    $cmake .. -DCMAKE_TOOLCHAIN_FILE=./Release/generators/conan_toolchain.cmake -DCMAKE_POLICY_DEFAULT_CMP0091=NEW -DCMAKE_POLICY_DEFAULT_CMP0057=NEW -DCMAKE_BUILD_TYPE=Release -DQT_VERSION_MAJOR=6
