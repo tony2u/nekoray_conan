@@ -1,0 +1,17 @@
+[requires]
+protobuf/3.21.4
+yaml-cpp/0.7.0
+zxing-cpp/2.0.0
+qt/6.4.2
+
+[generators]
+CMakeDeps
+CMakeToolchain
+
+[options]
+qt*:qtsvg=True
+qt*:qttranslations=True
+qt*:linguist=True
+
+[layout]
+cmake_layout
