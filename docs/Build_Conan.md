@@ -31,7 +31,7 @@ Linux:
    $cp ~/.conan2/profiles/default ~/.conan2/profiles/Linux.Release (confirm compiler.cppstd in Linux.Release： compiler.cppstd=gnu17 or compiler.cppstd=17)
 2. Build dependencies
 
-   $export NOT_ON_C3I=1 && conan install . -b missing -pr Linux.Release (qt/6.5.3: Invalid: qt is not supported on gcc11 and clang >= 12 on C3I until conan-io/conan-center-index#13472 is fixed)
+   $export NOT_ON_C3I=1 && conan install . -b missing -pr Linux.Release
 3. Build nekoray
 
    $cd build
